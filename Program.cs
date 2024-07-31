@@ -16,7 +16,7 @@ namespace Bank
 
             // signup
             manager.SignUp();
-
+            Console.WriteLine("Thank you for signing up");
 
 
             // Bank

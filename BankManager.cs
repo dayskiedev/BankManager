@@ -1,3 +1,5 @@
+using System.ComponentModel;
+
 public class BankManager {
     // reformat / remove this when switching to sql lite?
     List<Person> _people = new List<Person>();
@@ -7,29 +9,17 @@ public class BankManager {
 
         //TODO: add input checking for all this bruh
         Console.WriteLine("Enter your First Name");
-        fn = Console.ReadLine();
+        fn = Utils.ValidInput();    
 
         Console.WriteLine("Enter your Last Name");
-        ln = Console.ReadLine();
+        ln = Utils.ValidInput();
 
         Console.WriteLine("Enter your phone numer");
-        num = Console.ReadLine();
+        num = Utils.ValidInput();
 
-        while(true) {
-            Console.WriteLine("Enter a password");
-            pwd = Console.ReadLine();
-
-            Console.WriteLine("Confirm this password");
-            string temp = Console.ReadLine();
-
-            if(!string.Equals(pwd, temp)) {
-                Console.WriteLine("Password does not match, please try again");
-                continue;
-            } 
-            break;
-        }
-        
-        Console.WriteLine("Thank you for signing up, you will now be redirected to the login page");
+        pwd = Utils.CreatePassword();
+        Person p = new Person(fn, ln, pwd, num);
+        AddPerson(p);
     }
 
     public void AddPerson(Person p) {

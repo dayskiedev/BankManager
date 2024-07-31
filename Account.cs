@@ -1,4 +1,9 @@
 public class Account {
+    public Account(string accountName, int accountNum) {
+        this.accountName = accountName;
+        this.accountNum = accountNum;
+        balance = 0.0f; // load balance
+    } 
     public string accountName = "";
     public int accountNum;
     public float balance = 0.0f;
