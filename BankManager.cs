@@ -9,18 +9,20 @@ public class BankManager {
 
         //TODO: add input checking for all this bruh
         Console.WriteLine("Enter your First Name");
-        fn = Utils.ValidInput();    
+        fn = Utils.ValidConsoleInput();    
 
         Console.WriteLine("Enter your Last Name");
-        ln = Utils.ValidInput();
+        ln = Utils.ValidConsoleInput();
 
         Console.WriteLine("Enter your phone numer");
-        num = Utils.ValidInput();
+        num = Utils.ValidConsoleInput();
 
         pwd = Utils.CreatePassword();
         Person p = new Person(fn, ln, pwd, num);
         AddPerson(p);
     }
+
+    //login
 
     public void AddPerson(Person p) {
         _people.Add(p);

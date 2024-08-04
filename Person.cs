@@ -16,7 +16,7 @@ public class Person {
 
     }
     
-    public Account GetAccount(string accountName) {
+    public Account? GetAccount(string accountName) {
         foreach (Account account in _accounts) {
             if(account.accountName == accountName) {
                 return account;

@@ -1,5 +1,5 @@
 public class Utils {
-    public static string ValidInput() {
+    public static string ValidConsoleInput() {
         string? input;
 
         while (true) {
@@ -18,10 +18,10 @@ public class Utils {
         string pwd, temp;
         while(true) {
             Console.WriteLine("Enter a Password");
-            pwd = ValidInput();
+            pwd = ValidConsoleInput();
 
             Console.WriteLine("Confirm Password");
-            temp = ValidInput();
+            temp = ValidConsoleInput();
 
             if(!string.Equals(pwd, temp)) {
                 Console.WriteLine("Password does not match, please try again");

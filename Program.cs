@@ -4,9 +4,17 @@ namespace Bank
 {
     internal class Program
     {
+        enum State {
+            MAINMENU,
+            LOGIN,
+            LOGGEDIN,
+            SIGNUP,
+            INFO
+        };
         static void Main(string[] args)
         {
             BankManager manager = new BankManager();
+            //State state = State.MAINMENU;
             
             // menu options
             // login
@@ -14,10 +22,27 @@ namespace Bank
 
             ConsoleManager.PrintWelcomePage();
 
+            // state machine
+            // login 
             // signup
-            manager.SignUp();
-            Console.WriteLine("Thank you for signing up");
+            // info
 
+            manager.SignUp();
+
+            // login 
+            // user and pass
+            // put into logged in state
+            // can check account add to it etc
+            // split into 2 state machines? login and logged in?
+
+            // signup 
+            // basically just does below
+
+            // info
+            // info about the bank fake backstory etc?
+            
+            // signup
+            Console.WriteLine("Thank you for signing up");
 
             // Bank
             // contains People -> name, password, phone number, bank accounts
