@@ -1,13 +1,15 @@
 public class Person {   
 
-    public Person(string fn, string ln, string pwd, string num) {
+    public Person(string fn, string ln, string em, string pwd, string num) {
         FirstName = fn;
         LastName = ln;
+        email = em;
         password = pwd;
         phoneNum = num;
     }
     public string FirstName = "NULL";
     public string LastName = "NULL";
+    public string email = "NULL";
     public string password = "NULL";
     public string phoneNum = "NULL";
     private List<Account> _accounts = new List<Account>();

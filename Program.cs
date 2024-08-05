@@ -44,6 +44,8 @@ namespace Bank
             // signup
             Console.WriteLine("Thank you for signing up");
 
+            manager.Login();
+
             // Bank
             // contains People -> name, password, phone number, bank accounts
 
